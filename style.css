@@ -1,5 +1,5 @@
 body {
-  font-family: 'Serif';
+  font-family: 'Lato', 'Serif';
   font-size: 16px;
 }
 
@@ -11,9 +11,21 @@ textarea {
   border-left: 1px solid black;
   padding: 10px;
 }
+.p{
+  font-size: 12px;
+}
 
 .description {
   white-space: pre-wrap;
+}
+.saveEvent {
+  display: none;
+  padding-bottom: 10px;
+  
+}
+
+.show {
+  display: block;
 }
 
 .time-block {
