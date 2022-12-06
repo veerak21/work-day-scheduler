@@ -1,6 +1,6 @@
 $(document).ready(function (){
   var today = dayjs();
-$("#currentDay").text(today.format('MMMM DD, YYYY hh:mm a'));
+$("#currentDay").text(today.format('dddd, MMMM DD, YYYY. h:mm a'));
 $(".saveBtn").on("click", function(){
   console.log(this);
   var eventText = $(this).siblings(".description").val();
