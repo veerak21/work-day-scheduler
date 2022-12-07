@@ -13,7 +13,7 @@ $(".saveBtn").on("click", function(){
   // event massage and time save in localStorage
   localStorage.setItem(time, eventText);
 
-  // Show massage that event is saved to localStorage by adding class 'show'
+  // Display massage that event is saved to localStorage by adding class 'show'
   $(".saveEvent").addClass('show');
 
    // Timeout to remove 'show' class after 3 seconds
@@ -22,7 +22,7 @@ $(".saveBtn").on("click", function(){
    },3000)
    });
    
-// load any saved data from localStorage
+// accesing any saved data  from the localStorage
 $("#hour8 .description").val(localStorage.getItem("hour8"));
 $("#hour9 .description").val(localStorage.getItem("hour9"));
 $("#hour10 .description").val(localStorage.getItem("hour10"));
