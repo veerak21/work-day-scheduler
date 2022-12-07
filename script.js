@@ -1,19 +1,28 @@
 $(document).ready(function (){
+
+  // displays current day and time on page
   var today = dayjs();
 $("#currentDay").text(today.format('dddd, MMMM DD, YYYY. h:mm a'));
+
+// listen for save button clicks
 $(".saveBtn").on("click", function(){
   console.log(this);
   var eventText = $(this).siblings(".description").val();
   var time = $(this).parent().attr("id");
+
+  // event massage and time save in localStorage
   localStorage.setItem(time, eventText);
+
+  // Show massage that event is saved to localStorage by adding class 'show'
   $(".saveEvent").addClass('show');
 
+   // Timeout to remove 'show' class after 3 seconds
    setTimeout (function(){
     $(".saveEvent").removeClass('show')
    },3000)
    });
    
-
+// load any saved data from localStorage
 $("#hour8 .description").val(localStorage.getItem("hour8"));
 $("#hour9 .description").val(localStorage.getItem("hour9"));
 $("#hour10 .description").val(localStorage.getItem("hour10"));
@@ -30,12 +39,12 @@ $("#hour17 .description").val(localStorage.getItem("hour17"));
     //get current number of hours.
     var currentHour = dayjs().hour(); 
 
-    // loop over time blocks
+  
     $(".time-block").each(function () {
         var blockHour = parseInt($(this).attr("id").split("hour")[1]);
         console.log(blockHour, currentHour)
 
-        //check if we've moved past this time, display css given classes of past, present, or future
+        //checks if we've moved past current time, executes css given classes of past, present, or future
         if (blockHour < currentHour) {
             $(this).addClass("past");
             $(this).removeClass("future");
