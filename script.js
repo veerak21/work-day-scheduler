@@ -18,7 +18,7 @@ $(".saveBtn").on("click", function(){
 
    // Timeout to remove 'show' class after 3 seconds
    setTimeout (function(){
-    $(".saveEvent").removeClass('show')
+    $(".saveEvent").removeClass('show');
    },3000)
    });
    
@@ -60,9 +60,9 @@ $("#hour17 .description").val(localStorage.getItem("hour17"));
             $(this).removeClass("past");
             $(this).addClass("future");
         }
-    })
+    });
 }
 hourPlanner(); //re-run function
-  })
+  });
   
 
