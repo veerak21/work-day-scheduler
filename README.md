@@ -11,13 +11,13 @@ Thanks to Georgeyoo George (https://github.com/Georgeyoo), mfyke matt fyke (http
 
 ## Website URL and Screenshots:
 
+https://veerak21.github.io/work-day-scheduler/
+
 
  
-
-
 Screenshot:
 
-![screenshot-of-applicaton]()
+![screenshot-of-applicaton](./assets/img1.png)
 
 
 
